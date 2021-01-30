@@ -1,4 +1,5 @@
-﻿using YetAnotherConsoleTables.Attributes;
+﻿using BenchmarkCmp.Converters;
+using YetAnotherConsoleTables.Attributes;
 
 namespace BenchmarkCmp.Models.Output
 {
@@ -12,6 +13,7 @@ namespace BenchmarkCmp.Models.Output
         public abstract double ValueNew { get; set; }
 
         [TableMember(DisplayName = "delta", Order = 4)]
+        [TableMemberConverter(typeof(DeltaOutputConverter))]
         public double Delta => (ValueNew - ValueOld) / ValueOld;
     }
 }
