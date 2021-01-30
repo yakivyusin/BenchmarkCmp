@@ -8,4 +8,8 @@
     <PackageOutputPath>./artifacts</PackageOutputPath>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="YetAnotherConsoleTables" Version="3.0.0" />
+  </ItemGroup>
+
 </Project>
