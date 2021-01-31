@@ -14,6 +14,8 @@ namespace BenchmarkCmp.Models.Output
 
         [TableMember(DisplayName = "delta", Order = 4)]
         [TableMemberConverter(typeof(DeltaOutputConverter))]
-        public double Delta => (ValueNew - ValueOld) / ValueOld;
+        public double Delta => ValueOld != 0 ?
+            (ValueNew - ValueOld) / ValueOld :
+            0;
     }
 }
