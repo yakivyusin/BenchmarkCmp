@@ -27,16 +27,17 @@ namespace BenchmarkCmp
 
             var data1 = DataLoaderFactory.GetLoader(args[0]).LoadBenchmarks(args[0]);
             var data2 = DataLoaderFactory.GetLoader(args[1]).LoadBenchmarks(args[1]);
+            var tableFormat = new TableFormatting();
 
             var meanComparedData = new MeanComparer().Compare(data1, data2);
-            ConsoleTable.From(meanComparedData).Write(new TableFormatting());
+            ConsoleTable.From(meanComparedData).Write(tableFormat);
 
             var allocatedBytesComparedData = new AllocatedComparer().Compare(data1, data2);
 
             if (allocatedBytesComparedData.Length > 0)
             {
                 Console.WriteLine();
-                ConsoleTable.From(allocatedBytesComparedData).Write(new TableFormatting());
+                ConsoleTable.From(allocatedBytesComparedData).Write(tableFormat);
             }
         }
 
