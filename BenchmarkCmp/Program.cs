@@ -46,7 +46,15 @@ namespace BenchmarkCmp
             {
                 Console.WriteLine();
                 ConsoleTable.From(gen0ComparedData).Write(tableFormat);
-            }    
+            }
+
+            var gen1ComparedData = new Gen1Comparer().Compare(data1, data2);
+
+            if (gen1ComparedData.Length > 0)
+            {
+                Console.WriteLine();
+                ConsoleTable.From(gen1ComparedData).Write(tableFormat);
+            }
         }
 
         private class TableFormatting : ConsoleTableFormat
