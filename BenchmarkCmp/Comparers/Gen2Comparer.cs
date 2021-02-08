@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace BenchmarkCmp.Comparers
 {
-    public class Gen2Comparer
+    public class Gen2Comparer : BaseValueComparer
     {
-        public BenchmarkGen2Comparing[] Compare(Benchmark[] old, Benchmark[] @new)
+        public override BenchmarkGen2Comparing[] Compare(Benchmark[] old, Benchmark[] @new)
         {
             old = old.Where(x => x.Gen2Collects != null).ToArray();
             @new = @new.Where(x => x.Gen2Collects != null).ToArray();

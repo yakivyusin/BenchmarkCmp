@@ -1,6 +1,7 @@
 ﻿using BenchmarkCmp.Comparers;
 using BenchmarkCmp.DataLoaders;
 using System;
+using System.Collections.Generic;
 using System.Reflection;
 using YetAnotherConsoleTables;
 
@@ -28,40 +29,24 @@ namespace BenchmarkCmp
             var data1 = DataLoaderFactory.GetLoader(args[0]).LoadBenchmarks(args[0]);
             var data2 = DataLoaderFactory.GetLoader(args[1]).LoadBenchmarks(args[1]);
             var tableFormat = new TableFormatting();
-
-            var meanComparedData = new MeanComparer().Compare(data1, data2);
-            ConsoleTable.From(meanComparedData).Write(tableFormat);
-
-            var allocatedBytesComparedData = new AllocatedComparer().Compare(data1, data2);
-
-            if (allocatedBytesComparedData.Length > 0)
+            var comparers = new List<BaseValueComparer>
             {
-                Console.WriteLine();
-                ConsoleTable.From(allocatedBytesComparedData).Write(tableFormat);
-            }
+                new MeanComparer(),
+                new AllocatedComparer(),
+                new Gen0Comparer(),
+                new Gen1Comparer(),
+                new Gen2Comparer()
+            };
 
-            var gen0ComparedData = new Gen0Comparer().Compare(data1, data2);
-
-            if (gen0ComparedData.Length > 0)
+            foreach (var comparer in comparers)
             {
-                Console.WriteLine();
-                ConsoleTable.From(gen0ComparedData).Write(tableFormat);
-            }
+                var comparedData = comparer.Compare(data1, data2);
 
-            var gen1ComparedData = new Gen1Comparer().Compare(data1, data2);
-
-            if (gen1ComparedData.Length > 0)
-            {
-                Console.WriteLine();
-                ConsoleTable.From(gen1ComparedData).Write(tableFormat);
-            }
-
-            var gen2ComparedData = new Gen2Comparer().Compare(data1, data2);
-
-            if (gen2ComparedData.Length > 0)
-            {
-                Console.WriteLine();
-                ConsoleTable.From(gen2ComparedData).Write(tableFormat);
+                if (comparedData.Length > 0)
+                {
+                    ConsoleTable.From(comparedData).Write(tableFormat);
+                    Console.WriteLine();
+                }
             }
         }
 

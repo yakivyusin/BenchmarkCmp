@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace BenchmarkCmp.Comparers
 {
-    public class AllocatedComparer
+    public class AllocatedComparer : BaseValueComparer
     {
-        public BenchmarkAllocatedComparing[] Compare(Benchmark[] old, Benchmark[] @new)
+        public override BenchmarkAllocatedComparing[] Compare(Benchmark[] old, Benchmark[] @new)
         {
             old = old.Where(x => x.AllocatedBytes != null).ToArray();
             @new = @new.Where(x => x.AllocatedBytes != null).ToArray();

@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace BenchmarkCmp.Comparers
 {
-    public class MeanComparer
+    public class MeanComparer : BaseValueComparer
     {
-        public BenchmarkMeanComparing[] Compare(Benchmark[] old, Benchmark[] @new)
+        public override BenchmarkMeanComparing[] Compare(Benchmark[] old, Benchmark[] @new)
         {
             return old
                 .Join(@new,
