@@ -13,16 +13,7 @@ namespace BenchmarkCmp
         {
             if (args.Length != 2)
             {
-                var versionString = Assembly
-                    .GetEntryAssembly()
-                    .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-                    .InformationalVersion
-                    .ToString();
-
-                Console.WriteLine($"benchmarkcmp v{versionString}");
-                Console.WriteLine("Usage:");
-                Console.WriteLine("    benchmarkcmp <file1> <file2>");
-
+                PrintHelp();
                 return;
             }
 
@@ -48,6 +39,19 @@ namespace BenchmarkCmp
                     Console.WriteLine();
                 }
             }
+        }
+
+        private static void PrintHelp()
+        {
+            var versionString = Assembly
+                    .GetEntryAssembly()
+                    .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+                    .InformationalVersion
+                    .ToString();
+
+            Console.WriteLine($"benchmarkcmp v{versionString}");
+            Console.WriteLine("Usage:");
+            Console.WriteLine("    benchmarkcmp <file1> <file2>");
         }
 
         private class TableFormatting : ConsoleTableFormat
