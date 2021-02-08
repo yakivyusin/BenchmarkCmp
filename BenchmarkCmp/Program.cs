@@ -50,8 +50,12 @@ namespace BenchmarkCmp
                     .ToString();
 
             Console.WriteLine($"benchmarkcmp v{versionString}");
+            Console.WriteLine();
             Console.WriteLine("Usage:");
             Console.WriteLine("    benchmarkcmp <file1> <file2>");
+            Console.WriteLine();
+            Console.WriteLine("Supported file extensions:");
+            Console.WriteLine("    " + string.Join(", ", DataLoaderFactory.SupportedExtensions));
         }
 
         private class TableFormatting : ConsoleTableFormat
