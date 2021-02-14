@@ -6,6 +6,17 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>dotnet-benchmarkcmp</ToolCommandName>
     <PackageOutputPath>./artifacts</PackageOutputPath>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Copyright>Copyright 2021</Copyright>
+    <Authors>yakivyusin</Authors>
+    <Product />
+    <Company />
+    <PackageProjectUrl>https://github.com/yakivyusin/BenchmarkCmp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/yakivyusin/BenchmarkCmp</RepositoryUrl>
+    <Description>Inspired by go-benchcmp, dotnet-benchmarkcmp displays performance changes between benchmarks.
+
+benchmarkcmp parses the output of two BenchmarkDotNet benchmark runs, correlates the results per benchmark (based on name), and displays the deltas.</Description>
+    <PackageTags>benchmarking tool</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
