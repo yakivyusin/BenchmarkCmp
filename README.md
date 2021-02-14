@@ -1,4 +1,4 @@
-﻿# dotnet-benchmarkcmp
+﻿# dotnet-benchmarkcmp [![NuGet](https://img.shields.io/nuget/v/BenchmarkCmp.svg)](https://www.nuget.org/packages/BenchmarkCmp/)
 
 Inspired by `go-benchcmp`, `dotnet-benchmarkcmp` displays performance changes between benchmarks.
 
