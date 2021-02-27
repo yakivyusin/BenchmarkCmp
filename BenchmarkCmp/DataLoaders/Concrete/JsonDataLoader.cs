@@ -21,9 +21,19 @@ namespace BenchmarkCmp.DataLoaders.Concrete
                     AllocatedBytes = x.Memory?.BytesAllocatedPerOperation,
                     Gen0Collects = x.Memory?.Gen0Collections,
                     Gen1Collects = x.Memory?.Gen1Collections,
-                    Gen2Collects = x.Memory?.Gen2Collections
+                    Gen2Collects = x.Memory?.Gen2Collections,
+                    CompletedWorkItems = GetMetricValue(x, "CompletedWorkItemCount"),
+                    LockContentions = GetMetricValue(x, "LockContentionCount")
                 })
                 .ToArray();
+        }
+
+        private double? GetMetricValue(Benchmark benchmark, string metricName)
+        {
+            return benchmark
+                .Metrics
+                ?.FirstOrDefault(x => x.Descriptor.Id == metricName)
+                ?.Value;
         }
     }
 }

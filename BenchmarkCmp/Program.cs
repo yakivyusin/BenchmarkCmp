@@ -26,7 +26,9 @@ namespace BenchmarkCmp
                 new AllocatedComparer(),
                 new Gen0Comparer(),
                 new Gen1Comparer(),
-                new Gen2Comparer()
+                new Gen2Comparer(),
+                new CompletedWorkItemsComparer(),
+                new LockContentionsComparer()
             };
 
             foreach (var comparer in comparers)
