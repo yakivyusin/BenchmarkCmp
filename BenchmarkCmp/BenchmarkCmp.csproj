@@ -21,7 +21,7 @@ benchmarkcmp parses the output of two BenchmarkDotNet benchmark runs, correlates
 
   <ItemGroup>
     <PackageReference Include="ByteSize" Version="2.0.0" />
-    <PackageReference Include="YetAnotherConsoleTables" Version="3.0.1-alpha" />
+    <PackageReference Include="YetAnotherConsoleTables" Version="3.0.1" />
   </ItemGroup>
 
 </Project>
