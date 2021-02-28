@@ -29,7 +29,8 @@ namespace BenchmarkCmp
                 new Gen2Comparer(),
                 new CompletedWorkItemsComparer(),
                 new LockContentionsComparer(),
-                new BranchInstructionsComparer()
+                new BranchInstructionsComparer(),
+                new BranchMispredictionsComparer()
             };
 
             foreach (var comparer in comparers)
