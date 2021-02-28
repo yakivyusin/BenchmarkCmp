@@ -5,11 +5,11 @@ namespace BenchmarkCmp.Models.Output
 {
     public class BenchmarkAllocatedComparing : BenchmarkComparingBase
     {
-        [TableMember(DisplayName = "old allocs", Order = 2)]
+        [TableMember(DisplayName = "old allocs/op", Order = 2)]
         [TableMemberConverter(typeof(BytesOutputConverter))]
         public override double ValueOld { get; set; }
 
-        [TableMember(DisplayName = "new allocs", Order = 3)]
+        [TableMember(DisplayName = "new allocs/op", Order = 3)]
         [TableMemberConverter(typeof(BytesOutputConverter))]
         public override double ValueNew { get; set; }
     }
