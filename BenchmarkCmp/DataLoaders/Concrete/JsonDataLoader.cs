@@ -23,7 +23,10 @@ namespace BenchmarkCmp.DataLoaders.Concrete
                     Gen1Collects = x.Memory?.Gen1Collections,
                     Gen2Collects = x.Memory?.Gen2Collections,
                     CompletedWorkItems = GetMetricValue(x, "CompletedWorkItemCount"),
-                    LockContentions = GetMetricValue(x, "LockContentionCount")
+                    LockContentions = GetMetricValue(x, "LockContentionCount"),
+                    BranchInstructions = GetMetricValue(x, "BranchInstructions"),
+                    BranchMispredictions = GetMetricValue(x, "BranchMispredictions"),
+                    CacheMisses = GetMetricValue(x, "CacheMisses")
                 })
                 .ToArray();
         }
