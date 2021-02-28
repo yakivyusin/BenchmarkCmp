@@ -16,5 +16,11 @@
         public double? CompletedWorkItems { get; set; }
         public double? LockContentions { get; set; }
         #endregion
+
+        #region Hardware Counters Diagnoser
+        public double? BranchInstructions { get; set; }
+        public double? BranchMispredictions { get; set; }
+        public double? CacheMisses { get; set; }
+        #endregion
     }
 }
