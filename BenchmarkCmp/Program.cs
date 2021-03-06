@@ -32,7 +32,8 @@ namespace BenchmarkCmp
                 new BranchInstructionsComparer(),
                 new BranchMispredictionsComparer(),
                 new CacheMissesComparer(),
-                new NativeAllocatedComparer()
+                new NativeAllocatedComparer(),
+                new NativeLeakComparer()
             };
 
             foreach (var comparer in comparers)
