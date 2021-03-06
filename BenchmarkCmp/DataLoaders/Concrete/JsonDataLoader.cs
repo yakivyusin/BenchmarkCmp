@@ -26,7 +26,9 @@ namespace BenchmarkCmp.DataLoaders.Concrete
                     LockContentions = GetMetricValue(x, "LockContentionCount"),
                     BranchInstructions = GetMetricValue(x, "BranchInstructions"),
                     BranchMispredictions = GetMetricValue(x, "BranchMispredictions"),
-                    CacheMisses = GetMetricValue(x, "CacheMisses")
+                    CacheMisses = GetMetricValue(x, "CacheMisses"),
+                    NativeAllocatedBytes = (int?)GetMetricValue(x, "AllocatedNativeMemoryDescriptor"),
+                    NativeMemoryLeak = (int?)GetMetricValue(x, "NativeMemoryLeakDescriptor")
                 })
                 .ToArray();
         }

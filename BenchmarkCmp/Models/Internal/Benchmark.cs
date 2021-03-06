@@ -22,5 +22,10 @@
         public double? BranchMispredictions { get; set; }
         public double? CacheMisses { get; set; }
         #endregion
+
+        #region Native Memory Diagnoser
+        public int? NativeAllocatedBytes { get; set; }
+        public int? NativeMemoryLeak { get; set; }
+        #endregion
     }
 }
