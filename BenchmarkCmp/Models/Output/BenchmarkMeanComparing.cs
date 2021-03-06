@@ -7,10 +7,10 @@ namespace BenchmarkCmp.Models.Output
     {
         [TableMember(DisplayName = "old time/op", Order = 2)]
         [TableMemberConverter(typeof(TimeOutputConverter))]
-        public override double ValueOld { get; set; }
+        public override double ValueOld { get; init; }
 
         [TableMember(DisplayName = "new time/op", Order = 3)]
         [TableMemberConverter(typeof(TimeOutputConverter))]
-        public override double ValueNew { get; set; }
+        public override double ValueNew { get; init; }
     }
 }

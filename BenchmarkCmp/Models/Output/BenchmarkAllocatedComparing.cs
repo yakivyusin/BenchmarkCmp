@@ -7,10 +7,10 @@ namespace BenchmarkCmp.Models.Output
     {
         [TableMember(DisplayName = "old allocs/op", Order = 2)]
         [TableMemberConverter(typeof(BytesOutputConverter))]
-        public override double ValueOld { get; set; }
+        public override double ValueOld { get; init; }
 
         [TableMember(DisplayName = "new allocs/op", Order = 3)]
         [TableMemberConverter(typeof(BytesOutputConverter))]
-        public override double ValueNew { get; set; }
+        public override double ValueNew { get; init; }
     }
 }
