@@ -6,11 +6,11 @@ namespace BenchmarkCmp.Models.Output
     public abstract class BenchmarkComparingBase
     {
         [TableMember(DisplayName = "benchmark", Order = 1)]
-        public string Benchmark { get; set; }
+        public string Benchmark { get; init; }
 
-        public abstract double ValueOld { get; set; }
+        public abstract double ValueOld { get; init; }
 
-        public abstract double ValueNew { get; set; }
+        public abstract double ValueNew { get; init; }
 
         [TableMember(DisplayName = "delta", Order = 4)]
         [TableMemberConverter(typeof(DeltaOutputConverter))]
