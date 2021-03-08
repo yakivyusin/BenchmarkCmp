@@ -51,6 +51,17 @@ dotnet benchmarkcmp old.json new.json
 * Memory diagnoser:
   * Allocated memory
   * Gen 0, 1, 2 allocation
+* Threading Diagnoser
+  * Completed work items
+  * Lock contentions
+* Native Memory Profiler
+  * Allocated native memory
+  * Native memory leak
+* Hardware Counter Diagnoser
+  * Branch instructions
+  * Branch mispredictions
+  * Cache misses
 
 ## Supported exporters
-* JsonBrief
+* JsonExporter.Brief
+* JsonExporter.Full
