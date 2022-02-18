@@ -6,7 +6,7 @@
         public double Mean { get; init; }
 
         #region Memory Diagnoser
-        public int? AllocatedBytes { get; init; }
+        public long? AllocatedBytes { get; init; }
         public double? Gen0Collects { get; init; }
         public double? Gen1Collects { get; init; }
         public double? Gen2Collects { get; init; }
@@ -24,8 +24,8 @@
         #endregion
 
         #region Native Memory Diagnoser
-        public int? NativeAllocatedBytes { get; init; }
-        public int? NativeMemoryLeak { get; init; }
+        public long? NativeAllocatedBytes { get; init; }
+        public long? NativeMemoryLeak { get; init; }
         #endregion
     }
 }
