@@ -17,8 +17,8 @@
 
 benchmarkcmp parses the output of two BenchmarkDotNet benchmark runs, correlates the results per benchmark (based on name), and displays the deltas.</Description>
     <PackageTags>benchmarking tool</PackageTags>
-    <Version>1.1.0</Version>
-    <PackageReleaseNotes>Added support of Threading, Hardware Counters, and Native Memory diagnosers (from Json.Full exporter)</PackageReleaseNotes>
+    <Version>1.1.1</Version>
+    <PackageReleaseNotes>Changed internal type of memory values to long.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
