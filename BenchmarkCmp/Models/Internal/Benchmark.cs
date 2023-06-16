@@ -27,5 +27,9 @@
         public double? NativeAllocatedBytes { get; init; }
         public double? NativeMemoryLeak { get; init; }
         #endregion
+
+        #region Exception Diagnoser
+        public double? ExceptionFrequency { get; init; }
+        #endregion
     }
 }
