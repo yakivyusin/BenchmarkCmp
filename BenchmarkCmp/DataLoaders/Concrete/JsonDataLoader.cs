@@ -27,8 +27,8 @@ namespace BenchmarkCmp.DataLoaders.Concrete
                     BranchInstructions = GetMetricValue(x, "BranchInstructions"),
                     BranchMispredictions = GetMetricValue(x, "BranchMispredictions"),
                     CacheMisses = GetMetricValue(x, "CacheMisses"),
-                    NativeAllocatedBytes = (long?)GetMetricValue(x, "AllocatedNativeMemoryDescriptor"),
-                    NativeMemoryLeak = (long?)GetMetricValue(x, "NativeMemoryLeakDescriptor")
+                    NativeAllocatedBytes = GetMetricValue(x, "AllocatedNativeMemoryDescriptor"),
+                    NativeMemoryLeak = GetMetricValue(x, "NativeMemoryLeakDescriptor")
                 })
                 .ToArray();
         }
