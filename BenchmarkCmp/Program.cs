@@ -34,7 +34,10 @@ namespace BenchmarkCmp
                 new CacheMissesComparer(),
                 new NativeAllocatedComparer(),
                 new NativeLeakComparer(),
-                new ExceptionFrequencyComparer()
+                new ExceptionFrequencyComparer(),
+                new MethodsJittedComparer(),
+                new MethodsTieredComparer(),
+                new JitAllocatedComparer()
             };
 
             foreach (var comparer in comparers)

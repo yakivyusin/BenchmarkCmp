@@ -31,5 +31,11 @@
         #region Exception Diagnoser
         public double? ExceptionFrequency { get; init; }
         #endregion
+
+        #region JIT Stats Diagnoser
+        public double? MethodsJitted { get; init; }
+        public double? MethodsTiered { get; init; }
+        public double? JitAllocatedMemory { get; init; }
+        #endregion
     }
 }
