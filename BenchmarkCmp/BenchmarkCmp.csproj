@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>dotnet-benchmarkcmp</ToolCommandName>
     <PackageOutputPath>./artifacts</PackageOutputPath>
@@ -22,8 +22,8 @@ benchmarkcmp parses the output of two BenchmarkDotNet benchmark runs, correlates
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ByteSize" Version="2.0.0" />
-    <PackageReference Include="YetAnotherConsoleTables" Version="3.0.1" />
+    <PackageReference Include="ByteSize" Version="2.1.1" />
+    <PackageReference Include="YetAnotherConsoleTables" Version="3.2.0" />
   </ItemGroup>
 
 </Project>
