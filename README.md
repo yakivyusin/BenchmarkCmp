@@ -1,4 +1,4 @@
-﻿# dotnet-benchmarkcmp [![NuGet](https://img.shields.io/nuget/v/BenchmarkCmp.svg)](https://www.nuget.org/packages/BenchmarkCmp/)
+﻿# dotnet-benchmarkcmp [![NuGet](https://img.shields.io/nuget/v/BenchmarkCmp.svg)](https://www.nuget.org/packages/BenchmarkCmp/) [![Made in Ukraine](https://img.shields.io/badge/made_in-ukraine-ffd700.svg?labelColor=0057b7)](https://stand-with-ukraine.pp.ua)
 
 Inspired by `go-benchcmp`, `dotnet-benchmarkcmp` displays performance changes between benchmarks.
 
@@ -48,7 +48,7 @@ dotnet benchmarkcmp old.json new.json
 
 ## Supported data
 * Mean run time
-* Memory diagnoser:
+* Memory Diagnoser
   * Allocated memory
   * Gen 0, 1, 2 allocation
 * Threading Diagnoser
@@ -61,6 +61,12 @@ dotnet benchmarkcmp old.json new.json
   * Branch instructions
   * Branch mispredictions
   * Cache misses
+* Exception Diagnoser
+  * Exception frequency
+* JIT Stats Diagnoser
+  * Amount of JITted methods
+  * Amount of tiered methods
+  * JIT allocated memory
 
 ## Supported exporters
 * JsonExporter.Brief
