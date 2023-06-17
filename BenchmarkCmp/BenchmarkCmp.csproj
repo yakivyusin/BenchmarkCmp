@@ -23,6 +23,10 @@ benchmarkcmp parses the output of two BenchmarkDotNet benchmark runs, correlates
 
   <ItemGroup>
     <PackageReference Include="ByteSize" Version="2.1.1" />
+    <PackageReference Include="ThisAssembly.AssemblyInfo" Version="1.2.15">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="YetAnotherConsoleTables" Version="3.2.0" />
   </ItemGroup>
 

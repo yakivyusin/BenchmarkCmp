@@ -2,7 +2,6 @@
 using BenchmarkCmp.DataLoaders;
 using System;
 using System.Collections.Generic;
-using System.Reflection;
 using YetAnotherConsoleTables;
 
 namespace BenchmarkCmp
@@ -54,13 +53,7 @@ namespace BenchmarkCmp
 
         private static void PrintHelp()
         {
-            var versionString = Assembly
-                    .GetEntryAssembly()
-                    .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-                    .InformationalVersion
-                    .ToString();
-
-            Console.WriteLine($"benchmarkcmp v{versionString}");
+            Console.WriteLine($"benchmarkcmp v{ThisAssembly.Info.InformationalVersion}");
             Console.WriteLine();
             Console.WriteLine("Usage:");
             Console.WriteLine("    benchmarkcmp <file1> <file2>");
