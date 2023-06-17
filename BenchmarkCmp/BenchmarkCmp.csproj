@@ -19,6 +19,7 @@ benchmarkcmp parses the output of two BenchmarkDotNet benchmark runs, correlates
     <PackageTags>benchmarking tool</PackageTags>
     <Version>1.1.1</Version>
     <PackageReleaseNotes>Changed internal type of memory values to long.</PackageReleaseNotes>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +29,10 @@ benchmarkcmp parses the output of two BenchmarkDotNet benchmark runs, correlates
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="YetAnotherConsoleTables" Version="3.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" Visible="false" />
   </ItemGroup>
 
 </Project>
