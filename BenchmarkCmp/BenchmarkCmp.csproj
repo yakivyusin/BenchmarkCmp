@@ -17,9 +17,9 @@
 
 benchmarkcmp parses the output of two BenchmarkDotNet benchmark runs, correlates the results per benchmark (based on name), and displays the deltas.</Description>
     <PackageTags>benchmarking tool</PackageTags>
-    <Version>2.0.0</Version>
-    <PackageReleaseNotes>- Updated runtime to .NET 6.
-- Added Exception and JIT Stats diagnosers support.</PackageReleaseNotes>
+    <Version>2.1.0</Version>
+    <PackageReleaseNotes>- Added min / median / max statistics support.
+- Added XML exporter support (Brief and Full).</PackageReleaseNotes>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 

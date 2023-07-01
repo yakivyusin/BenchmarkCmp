@@ -18,6 +18,9 @@ namespace BenchmarkCmp.DataLoaders.Concrete
                 {
                     Name = x.DisplayInfo,
                     Mean = x.Statistics.Mean,
+                    Min = x.Statistics.Min,
+                    Median = x.Statistics.Median,
+                    Max = x.Statistics.Max,
                     AllocatedBytes = x.Memory?.BytesAllocatedPerOperation,
                     Gen0Collects = x.Memory?.Gen0Collections,
                     Gen1Collects = x.Memory?.Gen1Collections,

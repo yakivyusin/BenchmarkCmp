@@ -21,7 +21,10 @@ namespace BenchmarkCmp
             var tableFormat = new TableFormatting();
             var comparers = new List<BaseValueComparer>
             {
+                new MinComparer(),
+                new MedianComparer(),
                 new MeanComparer(),
+                new MaxComparer(),
                 new AllocatedComparer(),
                 new Gen0Comparer(),
                 new Gen1Comparer(),
