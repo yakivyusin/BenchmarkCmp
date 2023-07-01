@@ -10,7 +10,8 @@ namespace BenchmarkCmp.DataLoaders
     {
         private static readonly Dictionary<string, Func<IDataLoader>> _loaders = new()
         {
-            { ".json", () => new JsonDataLoader() }
+            [ ".json"] = () => new JsonDataLoader(),
+            [ ".xml"] = () => new XmlDataLoader()
         };
         public static string[] SupportedExtensions => _loaders.Keys.ToArray();
 
