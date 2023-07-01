@@ -4,6 +4,9 @@
     {
         public string Name { get; init; }
         public double Mean { get; init; }
+        public double Min { get; init; }
+        public double Median { get; init; }
+        public double Max { get; init; }
 
         #region Memory Diagnoser
         public double? AllocatedBytes { get; init; }
