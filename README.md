@@ -47,7 +47,8 @@ dotnet benchmarkcmp old.json new.json
 ```
 
 ## Supported data
-* Mean run time
+* Base Statistics
+  * Min / median / mean / max run time
 * Memory Diagnoser
   * Allocated memory
   * Gen 0, 1, 2 allocation
@@ -71,3 +72,5 @@ dotnet benchmarkcmp old.json new.json
 ## Supported exporters
 * JsonExporter.Brief
 * JsonExporter.Full
+* XmlExporter.Brief
+* XmlExporter.Full
